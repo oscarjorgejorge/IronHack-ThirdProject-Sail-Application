@@ -15,6 +15,7 @@
     <div *ngIf="feedbackEnabled && passwordField.errors">
       <p *ngIf="passwordField.errors.required" class="validation">password required</p>
       <p *ngIf="passwordField.errors.minlength" class="validation">password is too short</p>
+      <p *ngIf=(!error)
     </div>
   </div>
 

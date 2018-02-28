@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-page',
@@ -12,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   username : String;
   password : String;
   // ... model (e,g. username: String)
-  constructor(/* inject required services */) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,19 +24,20 @@ export class LoginPageComponent implements OnInit {
   submitForm(form) {
     this.error = '';
     this.feedbackEnabled = true;
+    const data = {
+      username : this.username,
+      password : this.password
+    }
     if (form.valid) {
       this.processing = true;
-      // this.someService.method(... data ...)
-      //   .then((result) => {
-      //     // ... handle result, reset form, etc...
-      //     // ... navigate with this.router.navigate(['...'])
-      //     // ... maybe turn this to false if your're staying on the page - this.processing = false;
-      //   })
-      //   .catch((err) => {
-      //     this.error = err.error.error; // :-)
-      //     this.processing = false;
-      //     this.feedbackEnabled = false;
-      //   });
+      this.authService.login(data)
+        .then((result) => {return this.router.navigate(['/trips'] )})
+        .catch((err) => {
+          this.error = err.error.error;
+          this.processing = false;
+          this.feedbackEnabled = false;
+          console.log(this.error);
+        })
     }
   }
 
