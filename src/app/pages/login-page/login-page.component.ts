@@ -15,7 +15,6 @@ export class LoginPageComponent implements OnInit {
   processing = false;
   username : String;
   password : String;
-  // ... model (e,g. username: String)
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
