@@ -31,12 +31,13 @@ export class LoginPageComponent implements OnInit {
     if (form.valid) {
       this.processing = true;
       this.authService.login(data)
-        .then((result) => {return this.router.navigate(['/trips'] )})
+        .then((result) => {return this.router.navigate(['/profile'] )})
         .catch((err) => {
           this.error = err.error.error;
           this.processing = false;
           this.feedbackEnabled = false;
           console.log(this.error);
+          console.log(typeof this.error);
         })
     }
   }

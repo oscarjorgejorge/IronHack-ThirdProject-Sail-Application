@@ -30,7 +30,7 @@ export class SignupPageComponent implements OnInit {
     if (form.valid) {
       this.processing = true;
       this.authService.signup(data)
-        .then((result) => {return this.router.navigate(['/trips'] )})
+        .then((result) => {return this.router.navigate(['/profile'] )})
         .catch((err) => {
           this.error = err.error.error;
           this.processing = false;

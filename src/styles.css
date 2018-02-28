@@ -118,3 +118,15 @@ form .validation {
 form .field.has-error input {
 	border: 1px solid  red;
 }
+
+.trips{
+  height: 500px;
+  background: red;
+
+}
+
+.profile{
+  height: 500px;
+  background-color: blue;
+
+}
