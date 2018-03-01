@@ -87,11 +87,7 @@ form .field {
 	margin-bottom: 20px;
 }
 
-form label {
-	display: block;
-	margin-bottom: 10px;
-	font-style: bold;
-}
+
 
 form input {
   padding: 5px;
@@ -144,4 +140,8 @@ form .field.has-error input {
 .logo-div{
   width: 83px;
   height: 83px;
+}
+
+.validation-done{
+  color: green;
 }

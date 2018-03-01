@@ -12,6 +12,8 @@ export class AuthService {
   private userChange: Subject<any> = new Subject();
 
   private API_URL = 'http://localhost:3000/auth';
+  private API_URL_USER = 'http://localhost:3000/user';
+
 
   userChange$: Observable<any> = this.userChange.asObservable();
 
@@ -67,4 +69,15 @@ export class AuthService {
   getUser(): any {
     return this.user;
   }
+
+  edit(user: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL_USER}/edit`, user, options)
+      .toPromise()
+      .then(() => this.setUser());
+  }
 }
+
+

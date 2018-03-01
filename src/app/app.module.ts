@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { TripsPageComponent } from './pages/trips-page/trips-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
+import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 // -- guards
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
@@ -46,7 +46,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService, RequireAnonGuardService, RequireUserGuardService, InitAuthGuardService],
+  providers: [UserService, AuthService, RequireAnonGuardService, RequireUserGuardService, InitAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

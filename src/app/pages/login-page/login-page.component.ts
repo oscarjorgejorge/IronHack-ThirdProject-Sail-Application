@@ -35,8 +35,6 @@ export class LoginPageComponent implements OnInit {
           this.error = err.error.error;
           this.processing = false;
           this.feedbackEnabled = false;
-          console.log(this.error);
-          console.log(typeof this.error);
         })
     }
   }

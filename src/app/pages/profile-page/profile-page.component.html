@@ -1,15 +1,33 @@
 
+<h1>My Profile</h1>
 
+<h3>{{username}}  complete your profile</h3>
 
-<div class="profile">
-    <p>profile-page works!</p>
-    <p>Username : {{username}}</p>
-    <p>Password : {{password}}</p>
-    <p>Phone :</p>
-    <p>Email :</p>
-    <p>About me :</p>
-</div>
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
-<button>Edit</button>
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && emailField.errors}">
+        <label for="email">Email : </label>
+        <input type="text" name="email" [(ngModel)]="email" #emailField="ngModel" minlength="4" [disabled]="processing"/>
+        <div *ngIf="feedbackEnabled && descriptionField.errors">
+            <p *ngIf="descriptionField.errors.minlength" class="validation">email is too short</p>
+          </div>
+      </div>
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
+        <label for="description">Description : </label>
+        <input type="text" name="description" [(ngModel)]="description"  #descriptionField="ngModel" minlength="20" [disabled]="processing"/>
+        <div *ngIf="feedbackEnabled && descriptionField.errors">
+            <p *ngIf="descriptionField.errors.minlength" class="validation">Minimum 20 characters require on your description</p>
+
+          </div>
+      </div>
+
+    <div class="field submit">
+      <button type="submit" [disabled]="processing">Save information</button>
+      <div *ngIf="goodfeedbackEnabled && form.valid">
+        <p class="validation-done">Thank you to update your profile</p>
+      </div>
+    </div>
+  </form>
 
 <a [routerLink]="['/my-trips']">My trips</a>
+
