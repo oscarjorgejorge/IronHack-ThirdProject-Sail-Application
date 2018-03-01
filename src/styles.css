@@ -143,5 +143,6 @@ form .field.has-error input {
 }
 
 .validation-done{
+  padding-top: 10px;
   color: green;
 }

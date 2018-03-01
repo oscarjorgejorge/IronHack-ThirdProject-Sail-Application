@@ -53,4 +53,9 @@ export class ProfilePageComponent implements OnInit {
     }
   }
 
+  delete() {
+    this.authService.delete()
+    .then(() => this.router.navigate(['/trips']))
+  }
+ 
 }

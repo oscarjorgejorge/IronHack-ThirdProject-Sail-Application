@@ -2,13 +2,14 @@
 <h1>My Profile</h1>
 
 <h3>{{username}}  complete your profile</h3>
+<button (click)="delete()">Delete account</button>
 
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && emailField.errors}">
         <label for="email">Email : </label>
         <input type="text" name="email" [(ngModel)]="email" #emailField="ngModel" minlength="4" [disabled]="processing"/>
-        <div *ngIf="feedbackEnabled && descriptionField.errors">
+        <div *ngIf="feedbackEnabled && emailField.errors">
             <p *ngIf="descriptionField.errors.minlength" class="validation">email is too short</p>
           </div>
       </div>

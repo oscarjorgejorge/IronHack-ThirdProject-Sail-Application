@@ -78,6 +78,15 @@ export class AuthService {
       .toPromise()
       .then(() => this.setUser());
   }
+
+  delete(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL_USER}/delete`, {}, options)
+      .toPromise()
+      .then(() => this.setUser());
+  }
 }
 
 
