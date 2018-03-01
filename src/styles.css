@@ -141,9 +141,7 @@ form .field.has-error input {
 
 }
 
-.logo{
+.logo-div{
   width: 83px;
   height: 83px;
-  background-image: url('https://image.flaticon.com/icons/svg/744/744889.svg');
-
 }
