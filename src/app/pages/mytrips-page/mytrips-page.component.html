@@ -1,3 +1,9 @@
 <p>
   my-trips-page works!
 </p>
+
+<button (click)="displayForm()">Create a new trip</button>
+
+ <div *ngIf="showform">
+   <app-create-new-trip-form (display)="handleDisplayForm($event)"></app-create-new-trip-form>
+</div>

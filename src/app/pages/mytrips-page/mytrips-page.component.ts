@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-my-trips-page',
-  templateUrl: './my-trips-page.component.html',
-  styleUrls: ['./my-trips-page.component.css']
+  selector: 'app-mytrips-page',
+  templateUrl: './mytrips-page.component.html',
+  styleUrls: ['./mytrips-page.component.css']
 })
 export class MyTripsPageComponent implements OnInit {
-
+  showform : boolean;
   constructor() { }
 
   ngOnInit() {
+    this.showform = false;
   }
 
+  displayForm() {
+    this.showform = true;
+  }
+
+  handleDisplayForm(status) {
+    this.showform = status;
+  }
 }
