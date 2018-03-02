@@ -17,7 +17,7 @@ import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
-import { MytripsPageComponent } from './pages/mytrips-page/mytrips-page.component';
+import { MyTripsPageComponent } from './pages/mytrips-page/mytrips-page.component';
 
 // -- routes
 const routes: Routes = [
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'login',  component: LoginPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'profile',  component: ProfilePageComponent, canActivate: [ RequireUserGuardService ] },
-  { path: 'my-trips',  component: MytripsPageComponent, canActivate: [ RequireUserGuardService ] },
+  { path: 'my-trips',  component: MyTripsPageComponent, canActivate: [ RequireUserGuardService ] },
 
 
   // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
@@ -39,8 +39,8 @@ const routes: Routes = [
     LoginPageComponent,
     TripsPageComponent,
     ProfilePageComponent,
-    MytripsPageComponent,
-    ProfileComponent
+    MyTripsPageComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
