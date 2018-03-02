@@ -26,32 +26,52 @@ export class ProfilePageComponent implements OnInit {
     this.description = user.description;
   }
 
-  submitForm(form) {
-    this.error = '';
-    this.feedbackEnabled = true;
+
+  handleUpdateProfile(newData) {
+    this.email = newData.email;
+    this.description = newData.description;
     const data = {
       email : this.email,
       username : this.username,
       description : this.description
     }
-    if (form.valid) {
-      this.processing = true;
-      this.authService.edit(data)
-        .then(() => {
-          this.processing = false;
-          this.feedbackEnabled = false;
-          this.goodfeedbackEnabled = true;
-          setTimeout(() => {
-            this.goodfeedbackEnabled = false;
-          }, 4000);
-        })
-        .catch((err) => {
-          this.error = err.error.error;
-          this.processing = false;
-          this.feedbackEnabled = false;
-        })
-    }
+    this.authService.edit(data)
+    .then()
+    .catch((err) => {
+      this.error = err.error.error;
+      this.processing = false;
+      this.feedbackEnabled = false;
+    })
   }
+
+
+
+  // submitForm(form) {
+  //   this.error = '';
+  //   this.feedbackEnabled = true;
+  //   const data = {
+  //     email : this.email,
+  //     username : this.username,
+  //     description : this.description
+  //   }
+  //   if (form.valid) {
+  //     this.processing = true;
+  //     this.authService.edit(data)
+  //       .then(() => {
+  //         this.processing = false;
+  //         this.feedbackEnabled = false;
+  //         this.goodfeedbackEnabled = true;
+  //         setTimeout(() => {
+  //           this.goodfeedbackEnabled = false;
+  //         }, 4000);
+  //       })
+  //       .catch((err) => {
+  //         this.error = err.error.error;
+  //         this.processing = false;
+  //         this.feedbackEnabled = false;
+  //       })
+  //   }
+  // }
 
   delete() {
     this.authService.delete()

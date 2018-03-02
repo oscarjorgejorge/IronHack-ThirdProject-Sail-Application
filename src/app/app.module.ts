@@ -9,6 +9,8 @@ import { TripsPageComponent } from './pages/trips-page/trips-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
+import { ProfileComponent } from './components/profile/profile.component';
+
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 // -- guards
@@ -38,7 +40,8 @@ const routes: Routes = [
     LoginPageComponent,
     TripsPageComponent,
     ProfilePageComponent,
-    MytripsPageComponent
+    MytripsPageComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

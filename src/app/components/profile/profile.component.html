@@ -1,13 +1,8 @@
+<p>
+  profile works!
+</p>
 
-<h1>My Profile</h1>
-
-<h3>{{username}}  complete your profile</h3>
-
-<app-profile [email]="email" [description]="description" (edit)="handleUpdateProfile($event)"></app-profile> 
-
-
-
-<!-- <button (click)="delete()">Delete account</button>
+<button (click)="delete()">Delete account</button>
 
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
@@ -33,7 +28,4 @@
         <p class="validation-done">Thank you to update your profile</p>
       </div>
     </div>
-  </form> -->
-
-<a [routerLink]="['/my-trips']">My trips</a>
-
+  </form>
