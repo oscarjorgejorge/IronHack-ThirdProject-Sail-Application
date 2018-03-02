@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTripsPageComponent implements OnInit {
   showform : boolean;
+  goodfeedbackEnabled : boolean;
   constructor() { }
 
   ngOnInit() {
     this.showform = false;
+    this.goodfeedbackEnabled = false;
   }
 
   displayForm() {
@@ -19,5 +21,9 @@ export class MyTripsPageComponent implements OnInit {
 
   handleDisplayForm(status) {
     this.showform = status;
+    this.goodfeedbackEnabled = true;
+    setTimeout(() => {
+      this.goodfeedbackEnabled = false;
+    }, 4000);
   }
 }

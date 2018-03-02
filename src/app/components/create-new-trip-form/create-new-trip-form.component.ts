@@ -25,7 +25,6 @@ export class CreateNewTripFormComponent implements OnInit {
     if (form.valid) {
       this.processing = true;
       this.display.emit(false)
-      console.log('functiona')
     }
   }
 
