@@ -18,6 +18,9 @@ import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { MyTripsPageComponent } from './pages/mytrips-page/mytrips-page.component';
+import { CreateNewTripFormComponent } from './components/create-new-trip-form/create-new-trip-form.component';
+import { TripListComponent } from './components/trip-list/trip-list.component';
+import { TripCardComponent } from './components/trip-card/trip-card.component';
 
 // -- routes
 const routes: Routes = [
@@ -41,6 +44,9 @@ const routes: Routes = [
     ProfilePageComponent,
     MyTripsPageComponent,
     ProfileComponent,
+    CreateNewTripFormComponent,
+    TripListComponent,
+    TripCardComponent,
   ],
   imports: [
     BrowserModule,
