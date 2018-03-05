@@ -4,9 +4,9 @@
 
 <button (click)="displayForm()">Create a new trip</button>
 
- <div *ngIf="showform">
-   <app-create-new-trip-form (display)="handleDisplayForm($event)"></app-create-new-trip-form>
+<div *ngIf="showform">
+   <app-create-new-trip-form (newtrip)="handleDisplayForm($event)"></app-create-new-trip-form>
 </div>
 <div *ngIf="goodfeedbackEnabled">
     <p class="validation-done">Thank you, your trip has been created</p>
-  </div>
+</div>

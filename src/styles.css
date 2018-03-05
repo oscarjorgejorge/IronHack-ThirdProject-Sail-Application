@@ -89,7 +89,8 @@ form .field {
 
 
 
-form input {
+form input, 
+textarea {
   padding: 5px;
   font-size: 16px;
 }
@@ -115,7 +116,8 @@ form .validation {
 	color: red;
 }
 
-form .field.has-error input {
+form .field.has-error input,
+textarea .field.has-error input{
 	border: 1px solid  red;
 }
 

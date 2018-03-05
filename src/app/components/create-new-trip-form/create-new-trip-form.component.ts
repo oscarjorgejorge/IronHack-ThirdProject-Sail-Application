@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./create-new-trip-form.component.css']
 })
 export class CreateNewTripFormComponent implements OnInit {
-  @Output() display = new EventEmitter<object>();
+  @Output() newtrip = new EventEmitter<object>();
   feedbackEnabled : boolean;
   error = null;
   processing : boolean;
@@ -30,7 +30,7 @@ export class CreateNewTripFormComponent implements OnInit {
         tripTitle: this.tripTitle,
         description: this.description
       }
-      this.display.emit(data)
+      this.newtrip.emit(data)
     }
   }
 
