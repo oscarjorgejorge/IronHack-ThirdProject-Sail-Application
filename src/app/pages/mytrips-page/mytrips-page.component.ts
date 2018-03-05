@@ -27,10 +27,11 @@ export class MyTripsPageComponent implements OnInit {
     setTimeout(() => {
       this.goodfeedbackEnabled = false;
     }, 4000);
-    // const data = {
-    //   triptitle,
-
-    // }
-    // this.tripService.createTrip()
+    const data = {
+      triptitle: info.triptitle,
+      description: info.description,
+      image: info.image,
+    }
+    this.tripService.createTrip(data)
   }
 }
