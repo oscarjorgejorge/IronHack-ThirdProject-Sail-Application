@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TripService } from '../../services/trip.service';
+
 
 @Component({
   selector: 'app-mytrips-page',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyTripsPageComponent implements OnInit {
   showform : boolean;
   goodfeedbackEnabled : boolean;
-  constructor() { }
+  constructor(private tripService: TripService) { }
 
   ngOnInit() {
     this.showform = false;
@@ -19,11 +21,16 @@ export class MyTripsPageComponent implements OnInit {
     this.showform = true;
   }
 
-  handleDisplayForm(status) {
-    this.showform = status;
+  handleDisplayForm(info) {
+    this.showform = info.showform;
     this.goodfeedbackEnabled = true;
     setTimeout(() => {
       this.goodfeedbackEnabled = false;
     }, 4000);
+    // const data = {
+    //   triptitle,
+
+    // }
+    // this.tripService.createTrip()
   }
 }

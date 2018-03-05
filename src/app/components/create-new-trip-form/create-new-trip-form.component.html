@@ -20,6 +20,10 @@
           <p *ngIf="descriptionField.errors.required" class="validation">Description is required</p>
       </div>
   </div>
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && imageField.errors}">
+    <label for="">Image : </label>
+    <input type="text" name="image" [(ngModel)]="image" #imageField="ngModel"  [disabled]="processing"/>
+</div>
   <div class="field submit">
       <button type="submit" [disabled]="processing">Create</button>
   </div>

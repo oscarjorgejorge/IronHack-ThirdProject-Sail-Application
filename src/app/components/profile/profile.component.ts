@@ -19,13 +19,15 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(form)  {
+  submitForm(form) {
     this.error = '';
     this.feedbackEnabled = true;
     const data = {
       email : this.email,
       description : this.description
     }
+
+    //Si quisiera usar promisas aqui... como 
     if (form.valid) {
       this.processing = true;
       this.edit.emit(data);
@@ -38,4 +40,5 @@ export class ProfileComponent implements OnInit {
       }, 4000);
     }
   }
+
 }

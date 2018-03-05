@@ -6,12 +6,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./create-new-trip-form.component.css']
 })
 export class CreateNewTripFormComponent implements OnInit {
-  @Output() display = new EventEmitter<boolean>();
+  @Output() display = new EventEmitter<object>();
   feedbackEnabled : boolean;
   error = null;
   processing : boolean;
   tripTitle : String;
   description : String;
+  image : String;
   constructor() { }
 
   ngOnInit() {
@@ -24,7 +25,12 @@ export class CreateNewTripFormComponent implements OnInit {
     this.feedbackEnabled = true;
     if (form.valid) {
       this.processing = true;
-      this.display.emit(false)
+      const data = {
+        showform: false,
+        tripTitle: this.tripTitle,
+        description: this.description
+      }
+      this.display.emit(data)
     }
   }
 

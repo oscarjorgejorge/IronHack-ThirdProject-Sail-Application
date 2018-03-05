@@ -12,6 +12,10 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 import { AuthService } from './services/auth.service';
+import { TripService } from './services/trip.service';
+
+
+TripService
 // -- guards
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
@@ -54,7 +58,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService, RequireAnonGuardService, RequireUserGuardService, InitAuthGuardService],
+  providers: [TripService, AuthService, RequireAnonGuardService, RequireUserGuardService, InitAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
