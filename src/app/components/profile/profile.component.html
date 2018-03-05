@@ -2,10 +2,6 @@
   profile works!
 </p>
 
-<!-- <button (click)="delete()">Delete account</button> -->
-
-<button>Delete account</button>
-
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && emailField.errors}">
@@ -17,7 +13,7 @@
       </div>
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
         <label for="description">Description : </label>
-        <input type="text" name="description" [(ngModel)]="description"  #descriptionField="ngModel" minlength="20" [disabled]="processing"/>
+        <textarea classs="description" type="text" name="description" [(ngModel)]="description"  #descriptionField="ngModel" minlength="20" [disabled]="processing" cols="30" rows="10"></textarea>
         <div *ngIf="feedbackEnabled && descriptionField.errors">
             <p *ngIf="descriptionField.errors.minlength" class="validation">Minimum 20 characters require on your description</p>
 
