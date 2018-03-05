@@ -28,7 +28,7 @@ export class MyTripsPageComponent implements OnInit {
       this.goodfeedbackEnabled = false;
     }, 4000);
     const data = {
-      triptitle: info.triptitle,
+      triptitle: info.tripTitle,
       description: info.description,
       image: info.image,
     }

@@ -10,15 +10,12 @@ export class TripService {
 
   constructor(private httpClient: HttpClient) { }
 
-
-
-
   createTrip(trip: any) {
-    const options = {
-      withCredentials: true
-    };
-    return this.httpClient.post(`${apiUrl}/create`, trip, options)
-      // .toPromise()
+    // const options = {
+    //   withCredentials: true
+    // };
+    return this.httpClient.post(`${apiUrl}/create`, trip)
+      .toPromise()
       // .then((data) => this.setUser(data));
   }
 }

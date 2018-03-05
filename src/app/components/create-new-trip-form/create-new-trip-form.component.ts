@@ -28,13 +28,11 @@ export class CreateNewTripFormComponent implements OnInit {
       const data = {
         showform: false,
         tripTitle: this.tripTitle,
-        description: this.description
+        description: this.description,
+        image: this.image
       }
       this.newtrip.emit(data)
     }
   }
-
-
-
 
 }
