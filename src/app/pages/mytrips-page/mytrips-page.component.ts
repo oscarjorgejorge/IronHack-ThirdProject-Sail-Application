@@ -45,4 +45,8 @@ export class MyTripsPageComponent implements OnInit {
     this.trips.push(data);
     this.tripService.createTrip(data)
   }
+
+  desactivateTrip(id) {
+    this.tripService.desactivate(id)
+  }
 }

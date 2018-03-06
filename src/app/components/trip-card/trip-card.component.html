@@ -1,12 +1,12 @@
 
-<div *ngIf="isAvailable">
+<div *ngIf="trip.isAvailable">
   <p>trip-card works!</p>
 
   {{trip.tripTitle}}
   {{trip.description}}
   {{trip.image}}
   {{trip._id}}
-  {{isAvailable}}
+  {{trip.isAvailable}}
   
   <a [routerLink]="['/trips', trip._id]"> details (link) </a>
   <div *ngIf="showbuttons">

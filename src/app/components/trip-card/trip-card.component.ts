@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Trip } from '../../class/trip';
 
 @Component({
   selector: 'app-trip-card',
@@ -7,9 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TripCardComponent implements OnInit {
   @Output() deactivate = new EventEmitter<any>();
-  @Input() trip: object;
-  @Input() isAvailable: boolean;
-  @Input() tripId: any;
+  @Input() trip: Trip;
   @Input() showbuttons: boolean;
 
   constructor() { }
@@ -18,9 +17,8 @@ export class TripCardComponent implements OnInit {
   }
 
   deactivateTrip() {
-    console.log('funciona')
-    this.isAvailable = false;
-    // const id = 
-    this.deactivate.emit(this.tripId);
+    this.trip.isAvailable = false;
+    const id = this.trip._id;
+    this.deactivate.emit(id);
   }
 }

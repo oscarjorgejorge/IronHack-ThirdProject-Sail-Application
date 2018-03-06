@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-trip-list',
@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./trip-list.component.css']
 })
 export class TripListComponent implements OnInit {
+  @Output() deactivate = new EventEmitter<any>();
 
   @Input() trips: Array<object>;
   @Input() showbuttons: boolean;
@@ -13,6 +14,11 @@ export class TripListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleDesactivateTrip(id) {
+    this.deactivate.emit(id);
+    console.log(id)
   }
 
 }
