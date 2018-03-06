@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TripCardComponent implements OnInit {
   @Input() trip: object;
+  @Input() showbuttons: boolean;
+
   constructor() { }
 
   ngOnInit() {

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TripListComponent implements OnInit {
 
   @Input() trips: Array<object>;
+  @Input() showbuttons: boolean;
 
   constructor() { }
 

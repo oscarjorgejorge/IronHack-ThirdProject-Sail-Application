@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 export class MyTripsPageComponent implements OnInit {
   user : any;
   showform : boolean;
+  showbuttons : boolean;
   goodfeedbackEnabled : boolean;
   trips: Array<any>=[];
 
@@ -18,6 +19,7 @@ export class MyTripsPageComponent implements OnInit {
   ngOnInit() {
     this.user = this.authService.getUser();
     this.showform = false;
+    this.showbuttons = true;
     this.goodfeedbackEnabled = false;
 
     this.tripService.getMyTrips()

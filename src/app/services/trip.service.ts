@@ -16,7 +16,6 @@ export class TripService {
     };
     return this.httpClient.post(`${apiUrl}/create`, trip, options)
       .toPromise()
-      // .then((data) => this.setUser(data));
   }
 
   getMyTrips() : Promise<any> {
@@ -29,19 +28,14 @@ export class TripService {
   }
 
   getAllTrips() : Promise<any> {
-    //   const options = {
-    //   withCredentials: true
-    // };
+
     return this.httpClient.get(`${apiUrl}/trips`)
     .toPromise()
     .then((trips: Object[]) => trips);
   }
 
   getTrip(id) : Promise<any> {
-    //   const options = {
-    //   withCredentials: true
-    // };
-    console.log(id)
+
     return this.httpClient.get(`${apiUrl}/trips/${id}`)
     .toPromise()
     .then((trip: Object) => trip);

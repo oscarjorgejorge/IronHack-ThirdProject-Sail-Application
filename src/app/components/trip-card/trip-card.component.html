@@ -7,3 +7,8 @@
 {{trip.image}}
 {{trip._id}}
 <a [routerLink]="['/trips', trip._id]"> details (link) </a>
+<div *ngIf="showbuttons">
+  <button>edit</button>
+  <button>delete</button>
+
+</div>
