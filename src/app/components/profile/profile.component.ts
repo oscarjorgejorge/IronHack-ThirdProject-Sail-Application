@@ -27,7 +27,6 @@ export class ProfileComponent implements OnInit {
       description : this.description
     }
 
-    //Si quisiera usar promisas aqui... como 
     if (form.valid) {
       this.processing = true;
       this.edit.emit(data);

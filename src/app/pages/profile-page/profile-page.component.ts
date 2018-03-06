@@ -43,35 +43,6 @@ export class ProfilePageComponent implements OnInit {
     })
   }
 
-
-
-  // submitForm(form) {
-  //   this.error = '';
-  //   this.feedbackEnabled = true;
-  //   const data = {
-  //     email : this.email,
-  //     username : this.username,
-  //     description : this.description
-  //   }
-  //   if (form.valid) {
-  //     this.processing = true;
-  //     this.authService.edit(data)
-  //       .then(() => {
-  //         this.processing = false;
-  //         this.feedbackEnabled = false;
-  //         this.goodfeedbackEnabled = true;
-  //         setTimeout(() => {
-  //           this.goodfeedbackEnabled = false;
-  //         }, 4000);
-  //       })
-  //       .catch((err) => {
-  //         this.error = err.error.error;
-  //         this.processing = false;
-  //         this.feedbackEnabled = false;
-  //       })
-  //   }
-  // }
-
   delete() {
     this.authService.delete()
     .then(() => this.router.navigate(['/trips']))
