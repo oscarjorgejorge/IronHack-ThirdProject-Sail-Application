@@ -10,6 +10,7 @@ export class TripCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.trip)
   }
 
 }

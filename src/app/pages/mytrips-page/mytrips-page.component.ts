@@ -36,7 +36,7 @@ export class MyTripsPageComponent implements OnInit {
     }, 4000);
     const data = {
       user: this.user, 
-      triptitle: info.tripTitle,
+      tripTitle: info.tripTitle,
       description: info.description,
       image: info.image,
     }
