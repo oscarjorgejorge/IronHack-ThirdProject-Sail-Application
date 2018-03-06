@@ -1,6 +1,6 @@
 export class Trip {
   _id : String;
-  title: string;
+  tripTitle: string;
   isAvailable: boolean;
   description: string;
   image: string;

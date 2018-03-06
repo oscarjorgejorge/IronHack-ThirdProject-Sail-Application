@@ -42,20 +42,7 @@ export class TripService {
   }
 
   desactivate(id) {
-  //     const options = {
-  //   withCredentials: true
-  // };
     return this.httpClient.post(`${apiUrl}/desactivate`, {id})
     .toPromise()
-    // .then(() => this.setUser());
   }
 }
-
-// delete(): Promise<any> {
-//   const options = {
-//     withCredentials: true
-//   };
-//   return this.httpClient.post(`${apiUrl_User}/delete`, {}, options)
-//     .toPromise()
-//     .then(() => this.setUser());
-// }
