@@ -22,7 +22,6 @@ export class MyTripsPageComponent implements OnInit {
 
     this.tripService.getMyTrips()
     .then((trips) => this.trips = trips);
-    console.log(this.trips)
   }
 
   displayForm() {

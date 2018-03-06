@@ -27,4 +27,13 @@ export class TripService {
     .toPromise()
     .then((trips: Object[]) => trips);
     }
+
+    getAllTrips() : Promise<any> {
+    //   const options = {
+    //   withCredentials: true
+    // };
+    return this.httpClient.get(`${apiUrl}/trips`)
+    .toPromise()
+    .then((trips: Object[]) => trips);
+    }
 }
