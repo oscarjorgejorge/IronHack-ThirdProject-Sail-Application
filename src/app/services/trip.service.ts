@@ -7,7 +7,7 @@ const apiUrl = environment.apiUrl + '/trip';
 
 @Injectable()
 export class TripService {
-
+ 
   constructor(private httpClient: HttpClient) { }
 
   createTrip(trip: any) {
@@ -18,4 +18,13 @@ export class TripService {
       .toPromise()
       // .then((data) => this.setUser(data));
   }
+
+  getMyTrips() : Promise<any> {
+      const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${apiUrl}/mytrips`, options)
+    .toPromise()
+    .then((trips: Object[]) => trips);
+    }
 }

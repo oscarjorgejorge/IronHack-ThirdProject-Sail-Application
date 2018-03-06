@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TripService } from '../../services/trip.service';
-
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-mytrips-page',
@@ -8,13 +8,21 @@ import { TripService } from '../../services/trip.service';
   styleUrls: ['./mytrips-page.component.css']
 })
 export class MyTripsPageComponent implements OnInit {
+  user : any;
   showform : boolean;
   goodfeedbackEnabled : boolean;
-  constructor(private tripService: TripService) { }
+  trips: Array<any>=[];
+
+  constructor(private authService : AuthService, private tripService: TripService) { }
 
   ngOnInit() {
+    this.user = this.authService.getUser();
     this.showform = false;
     this.goodfeedbackEnabled = false;
+
+    this.tripService.getMyTrips()
+    .then((trips) => this.trips = trips);
+    console.log(this.trips)
   }
 
   displayForm() {
@@ -28,10 +36,12 @@ export class MyTripsPageComponent implements OnInit {
       this.goodfeedbackEnabled = false;
     }, 4000);
     const data = {
+      user: this.user, 
       triptitle: info.tripTitle,
       description: info.description,
       image: info.image,
     }
+    this.trips.push(data);
     this.tripService.createTrip(data)
   }
 }
