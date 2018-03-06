@@ -41,6 +41,7 @@ export class MyTripsPageComponent implements OnInit {
       tripTitle: info.tripTitle,
       description: info.description,
       image: info.image,
+      isAvailable : true
     }
     this.trips.push(data);
     this.tripService.createTrip(data)
