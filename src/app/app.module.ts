@@ -11,6 +11,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { MyTripsPageComponent } from './pages/mytrips-page/mytrips-page.component';
 import { TripDetailPageComponent } from './pages/trip-detail-page/trip-detail-page.component';
+import { EdittripPageComponent } from './pages/edittrip-page/edittrip-page.component';
 
 import { ProfileComponent } from './components/profile/profile.component';
 import { CreateNewTripFormComponent } from './components/create-new-trip-form/create-new-trip-form.component';
@@ -34,8 +35,8 @@ const routes: Routes = [
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'profile',  component: ProfilePageComponent, canActivate: [ RequireUserGuardService ] },
   { path: 'my-trips',  component: MyTripsPageComponent, canActivate: [ RequireUserGuardService ] },
+  { path: 'my-trips/edit',  component: EdittripPageComponent, canActivate: [ RequireUserGuardService ] },
 
-  // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
   { path: '**', redirectTo: 'trips' }
 ];
 
@@ -47,6 +48,7 @@ const routes: Routes = [
     TripsPageComponent,
     ProfilePageComponent,
     MyTripsPageComponent,
+    EdittripPageComponent,
     ProfileComponent,
     CreateNewTripFormComponent,
     TripListComponent,
