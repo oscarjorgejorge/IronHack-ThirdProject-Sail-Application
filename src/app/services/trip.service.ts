@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 import { environment } from '../../environments/environment';
-const apiUrl = environment.apiUrl + '/trip';
+const apiUrl = environment.apiUrl;
 
 
 @Injectable()
@@ -26,14 +26,24 @@ export class TripService {
     return this.httpClient.get(`${apiUrl}/mytrips`, options)
     .toPromise()
     .then((trips: Object[]) => trips);
-    }
+  }
 
-    getAllTrips() : Promise<any> {
+  getAllTrips() : Promise<any> {
     //   const options = {
     //   withCredentials: true
     // };
     return this.httpClient.get(`${apiUrl}/trips`)
     .toPromise()
     .then((trips: Object[]) => trips);
-    }
+  }
+
+  getTrip(id) : Promise<any> {
+    //   const options = {
+    //   withCredentials: true
+    // };
+    console.log(id)
+    return this.httpClient.get(`${apiUrl}/trips/${id}`)
+    .toPromise()
+    .then((trip: Object) => trip);
+  }
 }
