@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Trip } from '../../class/trip';
 
 @Component({
   selector: 'app-tripdetail',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./tripdetail.component.css']
 })
 export class TripdetailComponent implements OnInit {
-  @Input() trip: object;
+  @Input() trip: Trip;
 
   constructor() { }
 

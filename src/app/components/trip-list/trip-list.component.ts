@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Trip } from '../../class/trip';
-
 
 @Component({
   selector: 'app-trip-list',
@@ -10,7 +8,7 @@ import { Trip } from '../../class/trip';
 export class TripListComponent implements OnInit {
   @Output() deactivate = new EventEmitter<any>();
 
-  @Input() trips: Array<Trip>;
+  @Input() trips: Array<object>;
   @Input() showbuttons: boolean;
 
   constructor() { }
