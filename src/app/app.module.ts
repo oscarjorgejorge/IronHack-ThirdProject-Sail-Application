@@ -24,6 +24,7 @@ import { TripService } from './services/trip.service';
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
+import { TripdetailComponent } from './components/tripdetail/tripdetail.component';
 
 // -- routes
 const routes: Routes = [
@@ -51,6 +52,7 @@ const routes: Routes = [
     TripListComponent,
     TripCardComponent,
     TripDetailPageComponent,
+    TripdetailComponent,
   ],
   imports: [
     BrowserModule,
