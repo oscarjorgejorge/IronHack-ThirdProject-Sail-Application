@@ -22,12 +22,12 @@ export class ProfileComponent implements OnInit {
   submitForm(form) {
     this.error = '';
     this.feedbackEnabled = true;
-    const data = {
-      email : this.email,
-      description : this.description
-    }
-
+    
     if (form.valid) {
+      const data = {
+        email : this.email,
+        description : this.description
+      }
       this.processing = true;
       this.edit.emit(data);
 

@@ -13,7 +13,7 @@ body {
 }
 
 
-/* ---- typography ---- */
+/* ---- typography and links ---- */
 
 body {
   color: #111;
@@ -32,24 +32,42 @@ p {
   margin: 0;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+ }
+ 
+ a:link, a:visited {
+  color: rgb(71, 71, 71);
+ }
 
 
 /* ---- layout ---- */
 
 #site-header {
   display: flex;
+  justify-content: space-between;
   color: white;
-  background: #111;
+  background: lightslategray;
 }
 
 .header-container{
   padding: 30px 0;
+  margin: 0px 20px 6px 0px;
+
+}
+
+.logo-div{
+  width: 66px;
+  height: auto;
+  margin: 10px 0px 6px 20px;
 }
 
 #site-footer {
   color: white;
   padding: 60px 0;
-  background: #111;
+  background: lightslategray;
 }
 
 #site-main {
@@ -57,7 +75,7 @@ p {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -155,24 +173,6 @@ textarea .field.has-error input{
 	border: 1px solid  red;
 }
 
-
-.mytrips{
-  height: 500px;
-  background: orange;
-
-}
-
-.profile{
-  height: 500px;
-  background-color: blue;
-
-}
-
-.logo-div{
-  width: 83px;
-  height: 83px;
-}
-
 .validation-done{
   padding-top: 10px;
   color: green;
@@ -181,3 +181,15 @@ textarea .field.has-error input{
 .trip-image {
   width: 100%;
 }
+
+button {
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
