@@ -4,10 +4,5 @@
   <div class="text-element">
     <h2 class="trip-title">{{trip.tripTitle}}</h2>
     <p>{{trip.description}}</p>
-    <button [routerLink]="['/trips', trip._id]"> See more details</button>
-
-    <div *ngIf="showbuttons">
-      <button [routerLink]="['/my-trips/edit', trip._id]">edit</button>
-      <button (click)="deactivateTrip()">Delete</button>
-    </div>
-  </div>
+    <button [routerLink]="['/trips']"> See all the trips</button>
+</div>

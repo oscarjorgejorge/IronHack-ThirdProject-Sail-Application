@@ -1,4 +1,6 @@
-<p>
-  trip-detail-page works!
-</p>
-<app-tripdetail [trip]="trip"></app-tripdetail>
+<div *ngIf="!trip" class="page-loading">....</div>
+
+<app-tripdetail *ngIf="trip" [trip]="trip"></app-tripdetail>
+
+
+

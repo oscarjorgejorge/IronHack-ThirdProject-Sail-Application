@@ -18,6 +18,7 @@ export class RequireAnonGuardService implements CanActivate {
         if (!user) {
           return true;
         } else {
+          console.log("bastard ")
           this.router.navigate(['/']);
           return false;
         }

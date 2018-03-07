@@ -17,6 +17,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CreateNewTripFormComponent } from './components/create-new-trip-form/create-new-trip-form.component';
 import { TripListComponent } from './components/trip-list/trip-list.component';
 import { TripCardComponent } from './components/trip-card/trip-card.component';
+import { TripdetailComponent } from './components/tripdetail/tripdetail.component';
 
 import { AuthService } from './services/auth.service';
 import { TripService } from './services/trip.service';
@@ -25,7 +26,6 @@ import { TripService } from './services/trip.service';
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
-import { TripdetailComponent } from './components/tripdetail/tripdetail.component';
 
 // -- routes
 const routes: Routes = [
