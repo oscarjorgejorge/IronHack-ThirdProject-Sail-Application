@@ -82,6 +82,11 @@ p {
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
  }
 
+ @media (min-device-width: 0px) and (max-device-width: 550px) {
+  .card {
+    flex: 1 0 100%;
+  }
+ }
 
 .section {
   margin-bottom: 20px;
