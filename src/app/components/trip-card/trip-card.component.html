@@ -4,8 +4,8 @@
   <div>
     <img class="trip-image" [src]="trip.image">
   </div>
-  <div>
-    <p>{{trip.tripTitle}}</p>
+  <div class="text-element">
+    <h2 class="trip-title">{{trip.tripTitle}}</h2>
     <p>{{trip.description}}</p>
     <a [routerLink]="['/trips', trip._id]"> details (link) </a>
     <div *ngIf="showbuttons">
