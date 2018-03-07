@@ -1,9 +1,7 @@
-<p>
-  trip-list works!
-</p>
 
-<ul>
-  <li *ngFor="let trip of trips">
+<div class="flex-container">
+  <div class="card" *ngFor="let trip of trips">
+
     <app-trip-card [trip]="trip" [showbuttons]="showbuttons" (deactivate)="handleDesactivateTrip($event)"></app-trip-card>
-  </li>
-</ul>
+  </div>
+</div>

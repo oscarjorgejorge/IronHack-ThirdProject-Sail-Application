@@ -57,20 +57,43 @@ p {
 }
 
 .container {
-  margin: 0 20px;
+  max-width: 85%;
+  margin: 0 auto;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.card {
+  flex: 1 0 30%;
+  margin: 1%;
+  /* margin: 0.3rem; */
+  background-color: white;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all .1s ease-in;
+}
+
+ .card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+ }
+
 
 .section {
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     max-width: 728px;
     margin: 0 auto;
   }
-}
+} */
 
 
 
@@ -121,11 +144,6 @@ textarea .field.has-error input{
 	border: 1px solid  red;
 }
 
-.trips{
-  height: 500px;
-  background: red;
-
-}
 
 .mytrips{
   height: 500px;
@@ -147,4 +165,8 @@ textarea .field.has-error input{
 .validation-done{
   padding-top: 10px;
   color: green;
+}
+
+.trip-image {
+  width: 100%;
 }

@@ -1,19 +1,18 @@
 
 <div *ngIf="trip.isAvailable">
-  <p>trip-card works!</p>
 
-  {{trip.tripTitle}}
-  {{trip.description}}
-  {{trip.image}}
-  {{trip._id}}
-  {{trip.isAvailable}}
-  
-  <a [routerLink]="['/trips', trip._id]"> details (link) </a>
-  <div *ngIf="showbuttons">
-    <button [routerLink]="['/my-trips/edit', trip._id]">edit</button>
-    <button (click)="deactivateTrip()">Delete</button>
-  
+  <div>
+    <img class="trip-image" [src]="trip.image">
   </div>
-
+  <div>
+    <p>{{trip.tripTitle}}</p>
+    <p>{{trip.description}}</p>
+    <a [routerLink]="['/trips', trip._id]"> details (link) </a>
+    <div *ngIf="showbuttons">
+      <button [routerLink]="['/my-trips/edit', trip._id]">edit</button>
+      <button (click)="deactivateTrip()">Delete</button>
+    </div>
+  </div>
+  
 </div>
 
