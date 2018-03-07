@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+
+import { Trip } from '../../class/trip';
 
 @Component({
   selector: 'app-create-new-trip-form',
@@ -6,18 +8,22 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./create-new-trip-form.component.css']
 })
 export class CreateNewTripFormComponent implements OnInit {
-  @Output() newtrip = new EventEmitter<object>();
+  @Output() save = new EventEmitter<object>();
+
+  @Input() trip: Trip;
+
   feedbackEnabled : boolean;
   error = null;
   processing : boolean;
-  tripTitle : String;
-  description : String;
-  image : String;
   constructor() { }
 
   ngOnInit() {
     this.processing = false;
     this.feedbackEnabled = false;
+
+    if (!this.trip) {
+      this.trip = {};
+    }
   }
 
   submitForm(form) {
@@ -25,13 +31,7 @@ export class CreateNewTripFormComponent implements OnInit {
     this.feedbackEnabled = true;
     if (form.valid) {
       this.processing = true;
-      const data = {
-        showform: false,
-        tripTitle: this.tripTitle,
-        description: this.description,
-        image: this.image
-      }
-      this.newtrip.emit(data)
+      this.save.emit(this.trip)
     }
   }
 

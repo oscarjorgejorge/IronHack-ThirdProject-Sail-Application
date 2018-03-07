@@ -35,8 +35,7 @@ const routes: Routes = [
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'profile',  component: ProfilePageComponent, canActivate: [ RequireUserGuardService ] },
   { path: 'my-trips',  component: MyTripsPageComponent, canActivate: [ RequireUserGuardService ] },
-  { path: 'my-trips/edit',  component: EdittripPageComponent, canActivate: [ RequireUserGuardService ] },
-
+  { path: 'my-trips/edit/:id',  component: EdittripPageComponent, canActivate: [ RequireUserGuardService ] },
   { path: '**', redirectTo: 'trips' }
 ];
 

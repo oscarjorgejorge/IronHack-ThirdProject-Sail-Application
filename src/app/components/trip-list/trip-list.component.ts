@@ -18,7 +18,7 @@ export class TripListComponent implements OnInit {
 
   handleDesactivateTrip(id) {
     this.deactivate.emit(id);
-    console.log(id)
+
   }
 
 }

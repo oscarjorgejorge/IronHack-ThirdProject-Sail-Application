@@ -6,7 +6,7 @@
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && tripTitleField.errors}">
       <label for="">Trip tittle : </label>
-      <input type="text" name="tripTitle" [(ngModel)]="tripTitle" #tripTitleField="ngModel" required minlength="6" [disabled]="processing"/>
+      <input type="text" name="tripTitle" [(ngModel)]="trip.tripTitle" #tripTitleField="ngModel" required minlength="6" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && tripTitleField.errors">
           <p *ngIf="tripTitleField.errors.minlength" class="validation">Title is too short</p>
           <p *ngIf="tripTitleField.errors.required" class="validation">Title is required</p>
@@ -14,7 +14,7 @@
   </div>
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
       <label for="">Description : </label>
-      <input type="text" name="description" [(ngModel)]="description" #descriptionField="ngModel" required minlength="10" [disabled]="processing"/>
+      <input type="text" name="description" [(ngModel)]="trip.description" #descriptionField="ngModel" required minlength="10" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && descriptionField.errors">
           <p *ngIf="descriptionField.errors.minlength" class="validation">Description is too short</p>
           <p *ngIf="descriptionField.errors.required" class="validation">Description is required</p>
@@ -22,9 +22,12 @@
   </div>
   <div class="field">
     <label for="">Image : </label>
-    <input type="text" name="image" [(ngModel)]="image" #imageField="ngModel"  [disabled]="processing"/>
-</div>
-  <div class="field submit">
-      <button type="submit" [disabled]="processing">Create</button>
+    <input type="text" name="image" [(ngModel)]="trip.image" #imageField="ngModel"  [disabled]="processing"/>
+  </div>
+  <div *ngIf="!this.trip._id" class="field submit">
+      <button type="submit" [disabled]="processing">Create Trip</button>
+  </div>
+  <div *ngIf="this.trip._id" class="field submit">
+      <button type="submit" [disabled]="processing">Edit Trip</button>
   </div>
 </form>

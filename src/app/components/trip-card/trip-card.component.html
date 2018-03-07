@@ -10,7 +10,7 @@
   
   <a [routerLink]="['/trips', trip._id]"> details (link) </a>
   <div *ngIf="showbuttons">
-    <button>edit</button>
+    <button [routerLink]="['/my-trips/edit', trip._id]">edit</button>
     <button (click)="deactivateTrip()">Delete</button>
   
   </div>

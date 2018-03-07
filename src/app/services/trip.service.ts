@@ -19,30 +19,46 @@ export class TripService {
   }
 
   getMyTrips() : Promise<any> {
-      const options = {
+    const options = {
       withCredentials: true
     };
     return this.httpClient.get(`${apiUrl}/mytrips`, options)
     .toPromise()
-    .then((trips: Object[]) => trips);
+    .then((trips: Object[]) => trips); // @todo delete these
   }
 
   getAllTrips() : Promise<any> {
-
-    return this.httpClient.get(`${apiUrl}/trips`)
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${apiUrl}/trips`, options)
     .toPromise()
     .then((trips: Object[]) => trips);
   }
 
   getTrip(id) : Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${apiUrl}/trips/${id}`, options)
+    .toPromise()
+    .then((trip: Object) => trip);
+  }
 
-    return this.httpClient.get(`${apiUrl}/trips/${id}`)
+  editTrip(trip) {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${apiUrl}/mytrips/edit/${trip._id}`, trip, options)
     .toPromise()
     .then((trip: Object) => trip);
   }
 
   desactivate(id) {
-    return this.httpClient.post(`${apiUrl}/desactivate`, {id})
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${apiUrl}/desactivate`, {id}, options)
     .toPromise()
   }
 }

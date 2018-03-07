@@ -1,3 +1,7 @@
 <p>
   edittrip-page works!
 </p>
+
+<div *ngIf="!trip" class="page-loading">....</div>
+
+<app-create-new-trip-form *ngIf="trip" [trip]="trip" (save)="handleEditTrip($event)"></app-create-new-trip-form>

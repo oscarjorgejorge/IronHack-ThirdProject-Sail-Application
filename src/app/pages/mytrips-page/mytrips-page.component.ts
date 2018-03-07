@@ -43,8 +43,9 @@ export class MyTripsPageComponent implements OnInit {
       image: info.image,
       isAvailable : true
     }
-    this.trips.push(data);
+    
     this.tripService.createTrip(data)
+    .then((newTrip) => this.trips.push(newTrip));
   }
 
   desactivateTrip(id) {
