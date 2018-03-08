@@ -29,7 +29,11 @@ padding: 15px 80px;
 
 .slogan3{
 border: 1px solid grey;
-background-color: rgba(255, 255, 255, 0.4);
+background-color: rgba(255, 255, 255, 0.5);
 display: inline;
 padding: 15px 150px;
+}
+
+.btn-carousel-container{
+  display: flex;
 }
