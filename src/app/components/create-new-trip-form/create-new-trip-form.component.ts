@@ -9,6 +9,7 @@ import { Trip } from '../../class/trip';
 })
 export class CreateNewTripFormComponent implements OnInit {
   @Output() save = new EventEmitter<object>();
+  @Output() hideFormClick = new EventEmitter<boolean>();
 
   @Input() trip: Trip;
 
@@ -33,6 +34,10 @@ export class CreateNewTripFormComponent implements OnInit {
       this.processing = true;
       this.save.emit(this.trip)
     }
+  }
+
+  handleHideForm() {
+    this.hideFormClick.emit(false)
   }
 
 }

@@ -26,7 +26,7 @@ export class EdittripPageComponent implements OnInit {
         this.tripId = params['id'];
         this.tripService.getTrip(this.tripId)
           .then((trip) => {
-            this.trip = trip;
+            this.trip = trip.result;
           });
       });
   }

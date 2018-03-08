@@ -51,4 +51,8 @@ export class MyTripsPageComponent implements OnInit {
   desactivateTrip(id) {
     this.tripService.desactivate(id)
   }
+
+  hideform(hide) {
+    this.showform = hide;
+  } 
 }
