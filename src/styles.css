@@ -81,8 +81,29 @@ a {
 }
 
 .container {
-  max-width: 98%;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.container-carousel1{
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1458430085161-25ad9d8960b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3d9b465d7065d4e066fe913e86768bdc&auto=format&fit=crop&w=1050&q=80')
+}
+
+.container-carousel2{
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1480742444427-f4bb0573e315?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6e1bf0f8c4bbe866785e045ff8556d0b&auto=format&fit=crop&w=1191&q=80')
+}
+/* https://images.unsplash.com/photo-1480742444427-f4bb0573e315?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6e1bf0f8c4bbe866785e045ff8556d0b&auto=format&fit=crop&w=1191&q=80 */
+.container-carousel3{
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1452065656801-6c60b6e7cbc5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07974657164afdcd2e43601b789a0b77&auto=format&fit=crop&w=967&q=80" alt="Third slide')
 }
 
 .flex-container {
@@ -94,7 +115,7 @@ a {
 .card {
   flex: 1 0 30%;
   /* margin: 1%; */
-  margin: 0.3rem;
+  margin: 0.4rem;
   background-color: white;
   position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);

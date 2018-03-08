@@ -1,0 +1,35 @@
+.slogan1-container{
+padding-top: 200px;
+padding-left: 500px;
+}
+
+.slogan1{
+border: 1px solid grey;
+background-color: rgba(66, 76, 88, 0.33);
+display: inline;
+padding: 15px 50px;
+}
+
+.slogan2-container{
+  padding-top: 200px;
+  padding-left: 500px;
+}
+
+.slogan2{
+border: 1px solid grey;
+background-color: rgba(255, 255, 255, 0.4);
+display: inline;
+padding: 15px 80px;
+}
+
+.slogan3-container{
+  padding-top: 200px;
+  padding-left: 500px;
+}
+
+.slogan3{
+border: 1px solid grey;
+background-color: rgba(255, 255, 255, 0.4);
+display: inline;
+padding: 15px 150px;
+}

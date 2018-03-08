@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { TripsPageComponent } from './pages/trips-page/trips-page.component';
@@ -59,7 +61,8 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgxCarouselModule
   ],
   providers: [TripService, AuthService, RequireAnonGuardService, RequireUserGuardService, InitAuthGuardService],
   bootstrap: [AppComponent]
