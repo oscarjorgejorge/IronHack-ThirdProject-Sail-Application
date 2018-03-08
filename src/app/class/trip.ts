@@ -4,6 +4,7 @@ export class Trip {
   isAvailable?: boolean;
   description?: string;
   image?: string;
+  _creator?: String;
   request?: Array<object>;
 
 }

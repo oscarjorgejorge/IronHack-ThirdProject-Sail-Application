@@ -64,7 +64,7 @@ a {
 
 #site-footer {
   color: white;
-  padding: 60px 0;
+  padding: 5px 0;
   background: lightslategray;
 }
 
@@ -97,17 +97,31 @@ a {
 
 .container-footer-second-div h3 {
   text-align: center;
-
 }
 .container-footer-second-div p {
   text-align: center;
-
+  padding-bottom: 5px;
 }
 
 .container-footer-third-div{
   margin-right: 50px;
 }
 
+.container-footer-third-div h3 {
+  text-align: center;
+}
+.container-footer-third-div p {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  margin: 0 auto;
+  padding-bottom: 10px;  
+}
 
 .container-carousel1{
   max-width: 100%;
