@@ -10,7 +10,7 @@
   </div>
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
       <label for="">Description : </label>
-      <input type="text" name="description" [(ngModel)]="trip.description" #descriptionField="ngModel" required minlength="10" [disabled]="processing"/>
+      <textarea type="text" name="description" [(ngModel)]="trip.description" #descriptionField="ngModel" required minlength="10" [disabled]="processing"></textarea>
       <div *ngIf="feedbackEnabled && descriptionField.errors">
           <p *ngIf="descriptionField.errors.minlength" class="validation">Description is too short</p>
           <p *ngIf="descriptionField.errors.required" class="validation">Description is required</p>

@@ -9,6 +9,7 @@
       <button [routerLink]="['/trips']"> See all the trips</button>
     </div>
     <div *ngIf="idUser === trip._creator">
+        <button [routerLink]="['/trips']"> See all the trips</button>
         <button [routerLink]="['/my-trips']"> See all my trips</button>
     </div>
 </div>

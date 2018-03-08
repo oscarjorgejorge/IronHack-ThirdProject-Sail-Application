@@ -10,7 +10,7 @@
     
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && descriptionField.errors}">
         <label for="description">Description : </label>
-        <textarea classs="description" type="text" name="description" [(ngModel)]="description"  #descriptionField="ngModel" minlength="20" [disabled]="processing" cols="30" rows="10"></textarea>
+        <textarea type="text" name="description" [(ngModel)]="description"  #descriptionField="ngModel" minlength="20" [disabled]="processing" cols="30" rows="10"></textarea>
         <div *ngIf="feedbackEnabled && descriptionField.errors">
             <p *ngIf="descriptionField.errors.minlength" class="validation">Minimum 20 characters require on your description</p>
         </div>
