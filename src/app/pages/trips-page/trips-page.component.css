@@ -1,37 +1,48 @@
 .slogan1-container{
 padding-top: 200px;
-padding-left: 500px;
+padding-left: 200px;
 }
 
 .slogan1{
-border: 1px solid grey;
-background-color: rgba(66, 76, 88, 0.33);
+/* border: 1px solid grey; */
+/* background-color: rgba(66, 76, 88, 0.33); */
+color: rgb(29, 45, 99);
 display: inline;
 padding: 15px 50px;
+font-size: 90px;
+font-family: 'Condiment', cursive;
 }
 
 .slogan2-container{
   padding-top: 200px;
-  padding-left: 500px;
+  padding-left: 250px;
 }
 
 .slogan2{
-border: 1px solid grey;
-background-color: rgba(255, 255, 255, 0.4);
+/* border: 1px solid grey; */
+/* background-color: rgba(255, 255, 255, 0.4); */
+color: rgb(29, 45, 99);
 display: inline;
 padding: 15px 80px;
+font-size: 90px;
+font-family: 'Condiment', cursive;
+
 }
 
 .slogan3-container{
   padding-top: 200px;
-  padding-left: 500px;
+  padding-left: 350px;
 }
 
 .slogan3{
-border: 1px solid grey;
-background-color: rgba(255, 255, 255, 0.5);
+/* border: 1px solid grey; */
+/* background-color: rgba(255, 255, 255, 0.5); */
+color: rgb(29, 45, 99);
 display: inline;
 padding: 15px 150px;
+font-size: 90px;
+font-family: 'Condiment', cursive;
+
 }
 
 .btn-carousel-container{

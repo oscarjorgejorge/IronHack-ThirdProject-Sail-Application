@@ -1,4 +1,4 @@
-<form class="sign-login" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<form class="sign-login-profil" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
     <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required  [disabled]="processing" placeholder="* Username"/>
