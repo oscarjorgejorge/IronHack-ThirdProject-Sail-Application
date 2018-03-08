@@ -8,6 +8,7 @@ import { Trip } from '../../class/trip';
 })
 export class TripdetailComponent implements OnInit {
   @Input() trip: Trip;
+  @Input() idUser: any;
 
   constructor() { }
 

@@ -4,5 +4,11 @@
   <div class="text-element">
     <h2 class="trip-title">{{trip.tripTitle}}</h2>
     <p>{{trip.description}}</p>
-    <button [routerLink]="['/trips']"> See all the trips</button>
+    <div *ngIf="idUser !== trip._creator">
+      <button class="btn-send-message"> Contact the Captain</button>
+      <button [routerLink]="['/trips']"> See all the trips</button>
+    </div>
+    <div *ngIf="idUser === trip._creator">
+        <button [routerLink]="['/my-trips']"> See all my trips</button>
+    </div>
 </div>

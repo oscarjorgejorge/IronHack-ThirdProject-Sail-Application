@@ -14,6 +14,7 @@ export class TripCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.trip.description = this.trip.description.split(" ").slice(0, 30).join(" ") + "...";
   }
 
   deactivateTrip() {

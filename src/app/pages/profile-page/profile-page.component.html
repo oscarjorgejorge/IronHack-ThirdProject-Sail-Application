@@ -5,6 +5,6 @@
 
 <app-profile [email]="email" [description]="description" (edit)="handleUpdateProfile($event)"></app-profile> 
 
-<button (click)="delete()">Delete</button>
+<button class="btn-delete" (click)="delete()">Delete</button>
 
 <a [routerLink]="['/my-trips']">My trips</a>

@@ -10,6 +10,7 @@ import { TripService } from '../../services/trip.service';
 export class TripDetailPageComponent implements OnInit {
   tripId: Number;
   trip: object;
+  idUser : any;
 
 
   constructor(private route: ActivatedRoute, private tripService: TripService) { }
@@ -18,7 +19,11 @@ export class TripDetailPageComponent implements OnInit {
     this.route.params
       .subscribe((params) => this.tripId = params['id']);
   this.tripService.getTrip(this.tripId)
-  .then((trip) => this.trip = trip);
+  .then((trip) => {
+    // this.trip = trip;
+    this.trip = trip.result;
+    this.idUser = trip.idUser;
+  });
   }
 
 }

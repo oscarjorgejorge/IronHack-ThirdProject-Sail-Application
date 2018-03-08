@@ -11,7 +11,7 @@
 
     <div *ngIf="showbuttons">
       <button [routerLink]="['/my-trips/edit', trip._id]">edit</button>
-      <button (click)="deactivateTrip()">Delete</button>
+      <button  class="btn-delete" (click)="deactivateTrip()">Delete</button>
     </div>
   </div>
   
