@@ -214,3 +214,8 @@ button {
   color: white;
   background-color: red;
 }
+
+.btn-create-trip{
+  background-color: green;
+  color: white;
+}

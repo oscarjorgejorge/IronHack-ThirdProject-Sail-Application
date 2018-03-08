@@ -1,6 +1,16 @@
-<div class="flex-container">
+<!-- <div class="flex-container">
   <div class="card" *ngFor="let trip of trips">
-
-    <app-trip-card [trip]="trip" [showbuttons]="showbuttons" (deactivate)="handleDesactivateTrip($event)"></app-trip-card>
+    <div *ngIf="trip.isAvailable">
+      <app-trip-card [trip]="trip" [showbuttons]="showbuttons" (deactivate)="handleDesactivateTrip($event)"></app-trip-card>
+    </div>
   </div>
+</div> -->
+
+
+<div class="flex-container">
+  <ng-container *ngFor="let trip of trips">
+      <div class="card" *ngIf="trip.isAvailable">
+          <app-trip-card [trip]="trip" [showbuttons]="showbuttons" (deactivate)="handleDesactivateTrip($event)"></app-trip-card>
+      </div>
+  </ng-container>
 </div>

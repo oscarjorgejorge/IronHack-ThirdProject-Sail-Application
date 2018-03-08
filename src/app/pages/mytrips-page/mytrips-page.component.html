@@ -1,8 +1,5 @@
-<p>
-  my-trips-page works!
-</p>
-<div *ngIf="!showform">
-  <button (click)="displayForm()">Create a new trip</button>
+<div class="container-btn-create-trip" *ngIf="!showform">
+  <button class="btn-create-trip" (click)="displayForm()">Create a new trip</button>
 </div>
 
 <div *ngIf="showform">
