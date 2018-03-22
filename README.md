@@ -1,3 +1,14 @@
+#Third-project-sail
+Ironhack bootcamp third module project . 1 week. 
+
+A platform that connects boat owners with other sailors who don't own boats, allowing both parties to enjoy and participate in the sailing experience. 
+
+Github repository (front-end) : https://github.com/oscarjorgejorge/third-project-sail
+Github repository (back-end) : https://github.com/oscarjorgejorge/third-project-sail-server
+
+Try it out: https://navega.herokuapp.com/trips
+
+
 # SailFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
