@@ -1,5 +1,8 @@
 #Third-project-sail
 Ironhack bootcamp third module project . 1 week. 
+Module that combine front-end and back-end.
+
+Technologies: Angular, Javascript, Nodejs, Expressjs, MongoDB/Mongoose, CSS, HTML
 
 A platform that connects boat owners with other sailors who don't own boats, allowing both parties to enjoy and participate in the sailing experience. 
 
