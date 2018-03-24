@@ -1,7 +1,7 @@
 #Third-project-sail
 
 Ironhack bootcamp third module project . 1 week. 
-Module that combine front-end and back-end.
+Module that combine front-end and back-end.  (This repository is the front-end).
 
 Technologies: Angular, Javascript, Nodejs, Expressjs, MongoDB/Mongoose, CSS, HTML
 
